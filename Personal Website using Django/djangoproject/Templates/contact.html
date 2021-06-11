@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Let's connect!</h1>
+<br>
+<br>
+<br>
+<h4>Email: majmundarkrutarth1810@gmail.com</h4>
+<h4>Contact: 0123456789</h4>
+<h4>LinkedIn Profile: <a href="https://www.linkedin.com/in/krutarth-majmundar-753393182/">Krutarth Majmundar</a></h4>
+<h4>GitHUB Profile: <a href="https://github.com/krutarth1810">Krutarth Majmundar</a></h4>
+<h4>Drop your message/ideas/suggestions:</h4>
+
+<form name="myform" action="/contact" method="post">
+{% csrf_token %}
+<fieldset><br>
+Name: <br><input type="text" name="name" style="width: 50%;" required="required">
+<br><br>
+Contact Number: <br><input type="number" name="phone" style="width: 50%;">
+<br><br>
+Email Id: <br><input type="text" name="email" style="width: 50%;" required="required">
+<br><br>
+message/ideas/suggestions: <br>
+<textarea rows=4 name="msg" style="width: 50%" required="required"></textarea>
+<br><br>
+<input type="submit" name="submit" value="submit">
+</fieldset>
+</form>
+
+{% endblock %}
